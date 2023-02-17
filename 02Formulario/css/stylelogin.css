@@ -95,4 +95,10 @@ a{
     float: left;
     margin-left: 120px;
     color: darkmagenta;
+    /*
+    Les dejaré una tarea mediante la cual deben de 
+    crear un formulario de registro que solicite: 
+    nombre, appat, apmat, contraseña y confirmar contraseña
+    ovbiamente respetando las reglas de estilo del sitio.
+    */
 }
