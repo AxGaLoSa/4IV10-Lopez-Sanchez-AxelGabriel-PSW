@@ -12,7 +12,6 @@ div{
 
 fieldset{
     margin-bottom: 12px;
-    
 }
 
 legend{
@@ -24,4 +23,8 @@ legend{
 
 span{
     font-weight: bold;
+}
+
+#PaginaPrincipal{
+    text-align: center;
 }
