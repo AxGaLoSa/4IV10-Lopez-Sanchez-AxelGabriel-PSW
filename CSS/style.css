@@ -3,3 +3,15 @@
     margin: 0;
     background-color: darkseagreen;
 }
+
+header{
+    text-align: center;
+    border: 2px solid rgb(68, 78, 139);
+    margin: 1rem;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+fieldset{
+    margin-bottom: 12px;
+}
