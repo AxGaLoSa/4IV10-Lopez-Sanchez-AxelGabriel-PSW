@@ -1,7 +1,15 @@
 *{
     padding: 0;
     margin: 0;
-    background-color: darkseagreen;
+    background-color: #A9E5BB;
+}
+
+div{
+    background-color: #FCF6B1;
+    border: 3px solid black;
+    padding: 12px;
+    width: 60%;
+    margin: 0 auto;
 }
 
 header{
@@ -14,4 +22,6 @@ header{
 
 fieldset{
     margin-bottom: 12px;
+    border: black;
+    text-align: center;
 }
