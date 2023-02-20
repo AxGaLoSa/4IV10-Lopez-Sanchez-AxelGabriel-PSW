@@ -36,3 +36,7 @@ span{
     text-decoration-color: black;
     text-align: center;
 }
+
+p{
+    border-bottom: black;
+}
