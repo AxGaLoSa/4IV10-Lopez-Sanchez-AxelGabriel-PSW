@@ -10,6 +10,9 @@ div{
     margin: 0 auto;
 }
 
+#nombre{
+    text-align: center;
+}
 fieldset{
     margin-bottom: 12px;
 }
