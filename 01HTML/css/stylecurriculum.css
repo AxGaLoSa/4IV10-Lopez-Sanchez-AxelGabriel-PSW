@@ -4,7 +4,7 @@ html, body{
 
 div{
     background-color: rgb(137, 124, 211);
-    border: 1px solid black;
+    border: 3px solid black;
     padding: 12px;
     width: 60%;
     margin: 0 auto;
@@ -25,6 +25,7 @@ legend{
     padding: 5px;
     border-radius: 20px;
     font-weight: bold;
+    border: black;
 }
 
 span{
