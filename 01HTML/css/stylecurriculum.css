@@ -1,9 +1,9 @@
 html, body{
-    background-color: #74b49b;
+    background-color: #ca1e2c;
 }
 
 div{
-    background-color: white;
+    background-color: rgb(102, 89, 175);
     border: 1px solid black;
     padding: 12px;
     width: 60%;
@@ -15,7 +15,7 @@ fieldset{
 }
 
 legend{
-    background-color: #74b49b;
+    background-color: #ca1e2c;
     padding: 5px;
     border-radius: 20px;
     font-weight: bold;
