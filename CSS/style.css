@@ -4,7 +4,7 @@
     background-color: #A9E5BB;
 }
 
-div{
+.container{
     background-color: #FCF6B1;
     border: 3px solid black;
     padding: 12px;
@@ -12,7 +12,7 @@ div{
     margin: 0 auto;
 }
 
-header{
+#cabecera{
     text-align: center;
     border: 2px solid rgb(68, 78, 139);
     margin: 1rem;
