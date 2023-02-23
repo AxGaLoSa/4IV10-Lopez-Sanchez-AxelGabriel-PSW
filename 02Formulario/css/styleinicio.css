@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    color: rgb(25,75,120);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+}
+
+.inicioexitoso{
+    background-color: #DB5461;
+    height: 400px;
+    width: 400px;
+    border-radius: 15px solid rgb(80,200,33);
+    margin-top: 10%;
+    text-align-last: center;
+}
+
+
+.exitoso{
+    text-align: center;
+    font-family: 'Roboto';
+    text-transform: uppercase;
+    font-size: 15px;
+    padding-top: 165px;
+    color: rgb(25,75,120);
+}
