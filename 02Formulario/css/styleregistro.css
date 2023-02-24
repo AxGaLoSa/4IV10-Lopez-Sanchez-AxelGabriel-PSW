@@ -156,6 +156,7 @@ body{
 }
 
 p a{
+    text-align: center;
     padding-top: 20px;
     margin-left: 40%;
     margin-right: 40%;
