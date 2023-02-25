@@ -29,8 +29,6 @@ function validar(formulario){
 
     var cadenaNombre = formulario.nombre.value;
 
-    alert(cadenaNombre);
-
     var todoesvalido = true;
 
     for(var i = 0; i < cadenaNombre.lenght; i++){
@@ -56,8 +54,6 @@ function validar(formulario){
 
     var cadenaNombre = formulario.edad.value;
 
-    alert(cadenaNombre);
-
     var todoesvalido = true;
 
     for(var i = 0; i < cadenaNombre.lenght; i++){
@@ -80,7 +76,6 @@ function validar(formulario){
     }
 
     var edad = parseInt(formulario.edad.value);
-    alert(edad);
     if((edad < 0) || (edad >= 99)){
         alert("Favor de ingresar una edad válida de entre 01 y 99 años");
         formulario.edad.focus();
