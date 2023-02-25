@@ -68,20 +68,6 @@ body{
     border-radius: 10px;
 }
 
-.buttonini p{
-    margin-top: 20px;
-    display: inline-flex;
-    font-size: 20px;
-    
-}
-
-.buttonini a{
-
-    margin-top: 5px;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
 
 .buttons{
     margin-top: 20px;
@@ -105,22 +91,16 @@ body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-p a{
+a{
     text-align: center;
     margin-left: 40%;
     margin-right: 40%;
     padding-left: 5px;
 }
 
-a{
-    margin-top: 20px;
-    float: left;
-    margin-left: 120px;
-    color: darkmagenta;
     /*
     Les dejaré una tarea mediante la cual deben de 
     crear un formulario de registro que solicite: 
     nombre, appat, apmat, contraseña y confirmar contraseña
     ovbiamente respetando las reglas de estilo del sitio.
     */
-} 
