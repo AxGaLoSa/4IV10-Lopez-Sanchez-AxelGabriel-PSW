@@ -51,17 +51,7 @@ function validar(formulario){
         formulario.nombre.focus();
         return false;
     }
-
-    var edad = parseInt(formulario.edad.value);
-
-    alert(edad);
-
-    if((edad < 0) || (edad >= 99)){
-        alert("Favor de ingresar una edad válida de entre 01 y 99 años");
-        formulario.edad.focus();
-        return false;
-    }
-
+//edad
     var checarABC = "0123456789";
 
     var cadenaNombre = formulario.edad.value;
@@ -89,6 +79,55 @@ function validar(formulario){
         return false;
     }
 
+    var edad = parseInt(formulario.edad.value);
+    alert(edad);
+    if((edad < 0) || (edad >= 99)){
+        alert("Favor de ingresar una edad válida de entre 01 y 99 años");
+        formulario.edad.focus();
+        return false;
+    }
+
+//  TAREA: VALIDAR FECHA DE NACIMIENTO
+    var fecha = new Date(formulario.fecha.value);
+    var hoy = new Date();
+    var mes = fecha.getMonth() + 1;
+    var dia = fecha.getDate();
+
+    if(fecha > hoy){
+        alert("La fecha de nacimiento no existe");
+        formulario.fecha.focus();
+        return false;
+    }
+
+    if ((mes < 1) || (mes > 12)){
+        alert("Mes no válido");
+        formulario.fecha.focus();
+        return false;
+    }
+
+    if((dia < 1) || (dia > 31)){
+        alert("Día invalido");
+        formulario.fecha.focus();
+        return false;
+    }
+
+    if ((mes == 2) && (dia > 29)){
+        alert("No hay diás mayores a 29 en el mes de Febrero");
+        formulario.fecha.focus();
+        return false;
+    }
+
+    let milisegundos = (hoy.getTime() - fecha.getTime());
+    var intervalo = milisegundos/(1000*60*60*24*365);
+    intervalo = Math.trunc(intervalo);
+
+    if(intervalo != edad){
+        alert("La fecha de nacimiento no coincide con la edad");
+        formulario.fecha.focus();
+        return false;
+    }
+
+
     //Ontener el campo de correo
     var email = formulario.correo.value;
 
@@ -98,7 +137,6 @@ function validar(formulario){
     alert("Email " + (prueba.test(email) ? " " : "No") + "valido");
 
     return prueba.test;
-
 
 
 }
