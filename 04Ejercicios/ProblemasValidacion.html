@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problemas Validación</title>
+    <script src="./JS/provalidacion.js"></script>
+</head>
+<body>
+    <h1>Ejercicios de JavaScript</h1>
+    <h2>López Sánchez Axel Gabriel 4IV10</h2>
+
+    <div class = "container">
+        <form method = "get" id = "problema1" action="">
+            <h1>Problema 1</h1>
+            <div class = "container1">
+                <table id = "tabla" class = "tablai">
+                    <tr>
+                        <td>Cantidad a invertir: </td>
+                        <td><input type="text" id = "cantidad" onkeypress="return validarn(event)"></td>
+                    </tr>
+                    <tr>
+                        <td>Meses de Inversión: </td>
+                        <td><input type="number" id = "meses" min = "1" max = "36" value = "0"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" name = "inversion" value = "Interés" onclick = "return f_interes()"></td>
+                    </tr>
+                    <tr>
+                        <td>Al termino de su inversiín valdrá: </td>
+                        <td><input type="text" name = "sueldoi" id = "cantidadi" readonly = "readonly" class = "input_text"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" name = "borrar" value = "Borrar Datos" onclick = "return borrard()"></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+        <br>
+
+
+
+        <form method = "get" id = "problema2" action="">
+            <h1>Problema 2</h1>
+            <div class = "container2">
+                <table id = "tabla" class = "tablai">
+                    <tr>
+                        <td>Sueldo Base: </td>
+                        <td><input type="text" id = "sueldo" onkeypress="return validarn(event)"></td>
+                    </tr>
+                    <tr>
+                        <td># Ventas en el Mes: </td>
+                        <td><input type="numer" id = "ventas" min="0" max="99" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td>Monto de las Ventas del Mes: </td>
+                        <td><input type="text" id = "monto_ventas" onkeypress = "return validarn(event)"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" name = "sueldo" value = "Calcular Sueldo" onclick="return f_sueldo()"></td>
+                    </tr>
+                    <tr>
+                        <td>Comisión de Ventas: </td>
+                        <td><input type="text" name  = "comisioni" id = "comision_total" readonly = "readonly" class = "input_text"></td>
+                    </tr>
+                    <tr>
+                        <td>Salario del Mes: </td>
+                        <td><input type="text" name = "sueldoi" id = "sueldo_total" readonly = "readonly" class = "input_text"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" name = "borrar" value = "Borrar Datos" onclick = "return borrard()"></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+        <br>
+
+
+
+            <h1>Problema 3</h1>
+            <div class="container">
+                <div class = "tabla-container">
+                    <form nombre="formulario" method="get"
+                    onsubmit="return validar(this)">
+                        <br>
+                        <label>Nombre del producto: </label>
+                        <input type="text" name="nombre"
+                        id="nombre" required>
+                        <br><br>
+        
+                        <label>Marca del producto: </label>
+                        <input type="text" name="marca" 
+                        id="marca" required>
+                        <br><br>
+        
+                        <label>Tipo de producto: </label>
+                        <input type="text" name="tipo" 
+                        id="tipo" required>
+                        <br><br>
+        
+                        <label>Precio del producto: </label>
+                        <input type="number" name="precio"
+                        id="precio" min="01" max="999" required>
+                        <br><br>
+        
+                        <input type="button" name="enviar"  onclick="return cantifinal()"
+                        value="Calcular">  
+                        <br><br>     
+    
+                        <td>
+                                Su total a pagar es:
+                        </td>
+                        <td>
+                            <input type="text" nombre="final" id="cantidad" readonly="readonly" 
+                            class="input_text">
+                        </td>
+                        <br><br>
+    
+                        <input type="button" name="borrar"
+                        value="Borrar Datos" onclick="return borrard()">           
+                    </form>
+                </div>
+                <br>
+            </div>
+        </form>
+        <br>
+
+
+
+        <form method = "get" id = "problema4" action="">
+            <h1>Problema 4</h1>
+            <div class = "container4">
+                <table id = "tabla" class = "tablai">
+                    <tr>
+                        <td>Calificaciones: </td>
+                    </tr>
+                    <tr>
+                        <td>1° Parcial </td>
+                        <td><input type="number" id = "parcial1" min = "0" max = "10"></td>
+                    </tr>
+                    <tr>
+                        <td>2° Parcial </td>
+                        <td><input type="number" id = "parcial2" min = "0" max = "10"></td>
+                    </tr>
+                    <tr>
+                        <td>3° Parcial </td>
+                        <td><input type="number" id = "parcial3" min = "0" max = "10"></td>
+                    </tr>
+                    <tr>
+                        <td>Exámen Final </td>
+                        <td><input type="number" id = "examenfinal" min = "0" max = "10"></td>
+                    </tr>
+                    <tr>
+                        <td>Trabajo Final </td>
+                        <td><input type="number" id = "trabajofinal" min = "0" max = "10"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" name = "calif" value = "Calificación" onclick = "return f_califica()"></td>
+                    </tr>
+                    <tr>
+                        <td>La Calificación Final es: </td>
+                        <td><input type="text" name = "calif" id = "calif_final" readonly = "readonly" class = "input_text"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" name = "borrar" value = "Borar Datos" onclick = "return f_califica()"></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+        <br>
+
+
+
+        <form method = "get" id = "problema5" action="">
+            <h1>Problema 5</h1>
+            <div class = "container5">
+                <table id = "tabla" class = "tablai">
+                    <tr>
+                        <td># Mujeres</td>
+                        <td><input type="number" id = "mujeres" min = "0" max = "99"></td>
+                    </tr>
+                    <tr>
+                        <td># Hombres</td>
+                        <td><input type="number" id = "hombres" min = "0" max = "99"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" name = "porcentaje" value = "Obtener Porcentajes" onclick="return f_porcentajes()"></td>
+                    </tr>
+                    <tr>
+                        <td>Porcentaje de Mujeres: </td>
+                        <td><input type="text" name = "#mujeres" id = "por_mujer" readonly = "readonly" class = "input_text"> </td>
+                    </tr>
+                    <tr>
+                        <td>Porcentaje de Hombres: </td>
+                        <td><input type="text" name = "#hombres" id = "por_hombre" readonly = "readonly" class = "input_text"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" name = "borrar" value = "Borrar Datos" onclick = "return borrard()"></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+        <br>
+
+
+
+        <form action=""></form>
+
+
+
+    </div>
+
+</body>
+</html>
