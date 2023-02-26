@@ -13,6 +13,7 @@ body{
 }
 
 fieldset{
+    text-align: center;
     border: black;
     border-radius: 10%;
 }
