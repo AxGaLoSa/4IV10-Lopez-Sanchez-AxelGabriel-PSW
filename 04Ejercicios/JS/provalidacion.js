@@ -9,6 +9,20 @@ function f_interes(){
     document.getElementById("cantidadi").value = "$ " + total;
 }
 
+function validarn(e){
+    var teclado = (document.all)? e.keyCode : e.which;
+
+    if(teclado == 8) return true;
+
+    var patron = /[0-9\d .]/;
+
+    var codigo = String.fromCharCode(teclado);
+
+    return patron.test(codigo);
+}
+
+
+
 //PROBLEMA 2
 function f_sueldo(){
     var sueldo = parseInt(document.getElementById("sueldo").value);
@@ -25,219 +39,31 @@ function f_sueldo(){
     document.getElementById("sueldo_total").value = "$ " + total;
 }
 
-
+//PAPAS = 2%, PASTELITO = 10%, LACTEO = 7.5%
 //PROBLEMA3
-function validar(formulario){
+function f_producto(){
+    var nombre = document.getElementById("nombre").value;
+    var marca = document.getElementById("marca").value;
+    var tipo = document.getElementById("tipo").value;
+    var precio = parseInt(document.getElementById("precio").value);
+    preciof = 0
 
-    //Validar nombre del producto
-    if(formulario.nombre.value.length <= 3){
-        alert("Favor de ingresar más de 3 caracteres en campo nombre");
-        formulario.nombre.focus();
-        return false;
+    if(tipo == "Papas" || "papas" || "PAPAS"){
+        descuento = (precio  * 0.02);
+        preciof = precio - descuento;
     }
 
-    else if(formulario.nombre.value.length >= 12){
-        alert("Favor de ingresar menos de 12 caracteres en campo nombre");
-        formulario.nombre.focus();
-        return false;
+    if(tipo == "Pastelito" || "pastelito" || "PASTELITO"){
+        descuento = (precio  * 0.10);
+        preciof = precio - descuento;
     }
 
-    var checarABC = "qwertyuiopasdfghjklñzxcvbnm"
-    + "QWERTYUIOPASDFGHJKLÑZXCVBNM" + "áéíóú" + "ÁÉÍÓÚ";
-
-    var cadenaNombre = formulario.nombre.value;
-
-    var todoesvalido = true;
-
-    for(var i = 0; i < cadenaNombre.length; i++){
-        var caracteres = cadenaNombre.charAt(i);
-        for(var j = 0; j < checarABC.length; j++){
-            if(caracteres == checarABC.charAt(j)){
-                break;
-            }
-        }
-        if(j == checarABC.length){
-            todoesvalido = false;
-            break;
-        }
+    if(tipo == "Lacteo" || "lacteo" || "LACTEO"){
+        descuento = (precio  * 0.075);
+        preciof = precio - descuento;
     }
 
-    if(!todoesvalido){
-        alert("Ingrese solo letras en el campo nombre");
-        formulario.nombre.focus();
-        return false;
-    }
-
-    var checarABC = "12345687890";
-
-    var cadenaNombre = formulario.precio.value;
-
-    var todoesvalido = true;
-
-    for(var i = 0; i < cadenaNombre.length; i++){
-        var caracteres = cadenaNombre.charAt(i);
-        for(var j = 0; j < checarABC.length; j++){
-            if(caracteres == checarABC.charAt(j)){
-                break;
-            }
-        }
-        if(j == checarABC.length){
-            todoesvalido = false;
-            break;
-        }
-    }
-    
-    //Validar marca del producto
-    if(formulario.marca.value.length <= 3){
-        alert("Favor de ingresar más de 3 caracteres en campo marca");
-        formulario.marca.focus();
-        return false;
-    }
-
-    else if(formulario.marca.value.length >= 12){
-        alert("Favor de ingresar menos de 12 caracteres en campo marca");
-        formulario.marca.focus();
-        return false;
-    }
-
-    var checarABC = "qwertyuiopasdfghjklñzxcvbnm"
-    + "QWERTYUIOPASDFGHJKLÑZXCVBNM" + "áéíóú" + "ÁÉÍÓÚ";
-
-    var cadenaMarca = formulario.marca.value;
-
-    var todoesvalido = true;
-
-    for(var i = 0; i < cadenaMarca.length; i++){
-        var caracteres = cadenaMarca.charAt(i);
-        for(var j = 0; j < checarABC.length; j++){
-            if(caracteres == checarABC.charAt(j)){
-                break;
-            }
-        }
-        if(j == checarABC.length){
-            todoesvalido = false;
-            break;
-        }
-    }
-
-    if(!todoesvalido){
-        alert("Ingrese solo letras en el campo marca");
-        formulario.marca.focus();
-        return false;
-    }
-
-    var checarABC = "12345687890";
-
-    var cadenaMarca = formulario.precio.value;
-
-    var todoesvalido = true;
-
-    for(var i = 0; i < cadenaMarca.length; i++){
-        var caracteres = cadenaMarca.charAt(i);
-        for(var j = 0; j < checarABC.length; j++){
-            if(caracteres == checarABC.charAt(j)){
-                break;
-            }
-        }
-        if(j == checarABC.length){
-            todoesvalido = false;
-            break;
-        }
-    }
-
-    //Validar tipo de producto
-    if(formulario.tipo.value.length <= 3){
-        alert("Favor de ingresar más de 3 caracteres en campo tipo");
-        formulario.tipo.focus();
-        return false;
-    }
-
-    else if(formulario.tipo.value.length >= 12){
-        alert("Favor de ingresar menos de 12 caracteres en campo tipo");
-        formulario.tipo.focus();
-        return false;
-    }
-
-    var checarABC = "qwertyuiopasdfghjklñzxcvbnm"
-    + "QWERTYUIOPASDFGHJKLÑZXCVBNM" + "áéíóú" + "ÁÉÍÓÚ";
-
-    var cadenaTipo = formulario.tipo.value;
-
-    var todoesvalido = true;
-
-    for(var i = 0; i < cadenaTipo.length; i++){
-        var caracteres = cadenaTipo.charAt(i);
-        for(var j = 0; j < checarABC.length; j++){
-            if(caracteres == checarABC.charAt(j)){
-                break;
-            }
-        }
-        if(j == checarABC.length){
-            todoesvalido = false;
-            break;
-        }
-    }
-
-    if(!todoesvalido){
-        alert("Ingrese solo letras en el campo tipo");
-        formulario.tipo.focus();
-        return false;
-    }
-
-    var checarABC = "12345687890";
-
-    var cadenaTipo = formulario.precio.value;
-
-    var todoesvalido = true;
-
-    for(var i = 0; i < cadenaTipo.length; i++){
-        var caracteres = cadenaTipo.charAt(i);
-        for(var j = 0; j < checarABC.length; j++){
-            if(caracteres == checarABC.charAt(j)){
-                break;
-            }
-        }
-        if(j == checarABC.length){
-            todoesvalido = false;
-            break;
-        }
-    }
-
-    //Validar precio del producto
-    if(!todoesvalido){
-        alert("Ingrese solo numeros en el campo precio");
-        formulario.precio.focus();
-        return false;
-    }
-
-
-    var precio = parseInt(formulario.precio.value);
-
-    if((precio < 0) || (precio >= 999)){
-        alert("Favor de ingresar un precio valido de entre 01 y 999 pesos");
-        formulario.precio.focus();
-        return false;
-    }
-}
-
-function cantifinal(){
-   //Operaciones respecto a los descuentos y final
-
-   var valor = document.getElementById("precio").value;
-   var tipo = document.getElementById("tipo").value;
-   var resul = parseInt(valor);
-   var papas = resul * 0.02;
-   var pastel = resul * 0.1;
-   var lacteo = resul * 0.075;
-
-   if(tipo == "papas" || tipo == "PAPAS" || tipo == "Papas"){
-       document.getElementById("cantidad").value = "$ " + (resul - papas);
-   } else if(tipo == "pastelito" || tipo == "PASTELITO" || tipo == "Pastelito"){
-    document.getElementById("cantidad").value = "$ " + (resul - pastel);
-   }else if(tipo == "lacteo" || tipo == "LACTEO" || tipo == "Lacteo"
-    || tipo == "lácteo" || tipo == "LÁCTEO" || tipo == "Lácteo"){
-        document.getElementById("cantidad").value = "$ " + (resul - lacteo);
-    }
+    document.getElementById("total").value = "$ " + preciof;
 }
 
 
@@ -269,4 +95,110 @@ function f_porcentajes(){
     document.getElementById("por_hombre").value = p_hombres + "%";
     document.getElementById("por_mujer").value = p_mujeres + "%";
 
+}
+
+
+//PROBLEMA 6
+function f_edad(){
+    var nacimiento = new Date(document.getElementById("nacimiento").value + "T00:00");
+    var hoy = new Date();
+
+    var edad = Math.trunc((hoy - nacimiento) / (1000 * 60 * 60 * 24 * 365));
+
+    document.getElementById("edad").value = edad + " años";
+}
+
+
+//PROBLEMA 7
+function f_dos_num(){
+    var num1 = parseInt(document.getElementById("num1").value);
+    var num2 = parseInt(document.getElementById("num2").value);
+    var resultado = 0;
+
+    if(num1 == num2){
+    resultado = num1 * num2;
+    }
+    if(num1 > num2){
+    resultado = num1 ** num2;
+    }
+    if(num1 < num2 && num2 != 0){
+    resultado = num1 / num2;
+    }
+
+    document.getElementById("resultado").value = resultado;
+}
+
+
+//PROBLEMA 8
+function f_tres_numeros(){
+
+    const tres = [];
+    tres[0] = parseInt(document.getElementById("numero1").value);
+	tres[1] = parseInt(document.getElementById("numero2").value);
+	tres[2] = parseInt(document.getElementById("numero3").value);
+	
+    document.getElementById("mayor").value = Math.max.apply(null, tres);
+}
+
+
+//PROBLEMA 9
+function horas_extras(){
+
+    var horas_totales = parseInt(document.getElementById("horas_totales").value);
+    var costo_hora = parseInt(document.getElementById("costo_hora").value);
+	var horas_41_a_48 = 0;
+	var horas_49_y_mas = 0;
+	
+	if (horas_totales > 40 ) { 
+		horas_41_a_48 = horas_totales -40;
+		
+		if (horas_41_a_48 > 8) {
+			horas_49_y_mas = horas_41_a_48 - 8;
+			horas_41_a_48 = 8;
+		}
+	}
+	
+	tot_extra = (horas_41_a_48 * 2 * costo_hora) + (horas_49_y_mas * 3 * costo_hora) ;
+	
+    document.getElementById("monto_extra").value = tot_extra;
+}
+
+
+//PROBLEMA 10
+function f_utilidades(){
+
+    var antiguedad = parseInt(document.getElementById("antiguo").value);
+    var sueldo = parseInt(document.getElementById("sueldo_mes").value);
+	var porcentaje = 0;
+
+	switch(antiguedad) {
+		case 0: porcentaje = 5;
+		break;
+		case 1: porcentaje = 7;
+		break;
+		case 2: porcentaje = 10;
+		break;
+		case 3: porcentaje = 15;
+		break;
+		default: porcentaje = 20;
+	}
+	var utilidad = sueldo * (porcentaje/100);
+	
+    document.getElementById("utilidades").value = "$ "+ utilidad;
+}
+
+
+
+//FUNCIONES DE BORRAR DATOS
+function borrard(){
+    document.getElementById("problema1").reset();
+    document.getElementById("problema2").reset();
+    document.getElementById("problema3").reset();
+    document.getElementById("problema4").reset();
+    document.getElementById("problema5").reset();
+    document.getElementById("problema6").reset();
+    document.getElementById("problema7").reset();
+    document.getElementById("problema8").reset();
+    document.getElementById("problema9").reset();
+    document.getElementById("problema10").reset();
 }

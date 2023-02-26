@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Problemas Validación</title>
+    <link rel="stylesheet" href="./css/styleproblemas.css">
     <script src="./JS/provalidacion.js"></script>
 </head>
 <body>
-    <h1>Ejercicios de JavaScript</h1>
-    <h2>López Sánchez Axel Gabriel 4IV10</h2>
+    <fieldset>
+        <h1>Ejercicios de JavaScript</h1>
+        <h2>López Sánchez Axel Gabriel 4IV10</h2>
+    </fieldset>
 
     <div class = "container">
         <form method = "get" id = "problema1" action="">
@@ -22,7 +25,7 @@
                     </tr>
                     <tr>
                         <td>Meses de Inversión: </td>
-                        <td><input type="number" id = "meses" min = "1" max = "36" value = "0"></td>
+                        <td><input type="number" id = "meses" min = "1" max = "36" value = ""></td>
                     </tr>
                     <tr>
                         <td></td>
@@ -53,7 +56,7 @@
                     </tr>
                     <tr>
                         <td># Ventas en el Mes: </td>
-                        <td><input type="numer" id = "ventas" min="0" max="99" value="1"></td>
+                        <td><input type="numer" id = "ventas" min="0" max="99" value="" onkeypress="return validarn(event)"></td>
                     </tr>
                     <tr>
                         <td>Monto de las Ventas del Mes: </td>
@@ -81,51 +84,39 @@
         <br>
 
 
-
+        <form method = "get" id = "problema3" action="">
             <h1>Problema 3</h1>
-            <div class="container">
-                <div class = "tabla-container">
-                    <form nombre="formulario" method="get"
-                    onsubmit="return validar(this)">
-                        <br>
-                        <label>Nombre del producto: </label>
-                        <input type="text" name="nombre"
-                        id="nombre" required>
-                        <br><br>
-        
-                        <label>Marca del producto: </label>
-                        <input type="text" name="marca" 
-                        id="marca" required>
-                        <br><br>
-        
-                        <label>Tipo de producto: </label>
-                        <input type="text" name="tipo" 
-                        id="tipo" required>
-                        <br><br>
-        
-                        <label>Precio del producto: </label>
-                        <input type="number" name="precio"
-                        id="precio" min="01" max="999" required>
-                        <br><br>
-        
-                        <input type="button" name="enviar"  onclick="return cantifinal()"
-                        value="Calcular">  
-                        <br><br>     
-    
-                        <td>
-                                Su total a pagar es:
-                        </td>
-                        <td>
-                            <input type="text" nombre="final" id="cantidad" readonly="readonly" 
-                            class="input_text">
-                        </td>
-                        <br><br>
-    
-                        <input type="button" name="borrar"
-                        value="Borrar Datos" onclick="return borrard()">           
-                    </form>
-                </div>
-                <br>
+            <div class="container3">
+                <table id = "tabla" class = "tablai">
+                    <tr>
+                        <td>Nombre del Producto: </td>
+                        <td><input type="text" name="nombre" id="nombre"></td>
+                    </tr>
+                    <tr>
+                        <td>Marca del Producto: </td>
+                        <td><input type="text" name="marca" id="marca"></td>
+                    </tr>
+                    <tr>
+                        <td>Tipo de Producto: </td>
+                        <td><input type="text" name="tipo" id="tipo"></td>
+                    </tr>
+                    <tr>
+                        <td>Precio del producto: </td>
+                        <td><input type="number" name="precio" id="precio" min = "01" max = "999"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" name="calcular" value="Calcular" onclick="return f_producto()"></td>  
+                    </tr>
+                    <tr>
+                        <td>El total a pagar es de: </td>
+                        <td><input type="text" nombre = "total" id = "total" readonly = "readonly" class = "input_text"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" name="borrar" value="Borrar Datos" onclick="return borrard()"></td>
+                    </tr> 
+                </table>
             </div>
         </form>
         <br>
@@ -169,7 +160,7 @@
                     </tr>
                     <tr>
                         <td></td>
-                        <td><input type="button" name = "borrar" value = "Borar Datos" onclick = "return f_califica()"></td>
+                        <td><input type="button" name = "borrar" value = "Borar Datos" onclick = "return borrard()"></td>
                     </tr>
                 </table>
             </div>
@@ -213,7 +204,162 @@
 
 
 
-        <form action=""></form>
+        <form method = "get" id = "problema6" action="">
+            <h1>Problema 6</h1>
+            <div class = "container6">
+                <table id = "tabla" class = "tablai">
+                    <tr>
+                        <td>Fecha de Nacimiento: </td>
+                        <td><input type="date" id  = "nacimiento"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" name  = "edad" value = "Calcular Edad" onclick = "return f_edad()"></td>
+                    </tr>
+                    <tr>
+                        <td>Su edad es de: </td>
+                        <td><input type="text" name  = "edad_1" id  = "edad" readonly  = "readonly" class  = "input_text"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" name  = "borrar" value = "Borrar Datos" onclick = "return borrard()"></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+        <br>
+
+
+
+        <form method = "get" id = "problema7" action="">
+            <h1>Problema 7</h1>
+            <div class = "container7">
+                <table id = "tabla" class = "tablai">
+                    <tr>
+                        <td>1° Número: </td>
+                        <td><input type="number" id  = "num1" min = "0" max = "99"></td>
+                    </tr>
+                    <tr>
+                        <td>2° Número: </td>
+                        <td><input type="number" id  = "num2" min = "0" max = "99"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" name = "operacion1" value = "Calcular" onclick = "return f_dos_num()"></td>
+                    </tr>
+                    <tr>
+                        <td>Resultado: </td>
+                        <td><input type="text" name = "operacion" id = "resultado" readonly = "readonly" class = "input_text"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" name = "borrar" value = "Borrar Datos" onclick = "return borrard()"></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+        <br>
+
+
+
+        <form method = "get" id = "problema8" action="">
+            <h1>Problema 8</h1>
+            <div class = "container8">
+                <table id = "tabla" class  = "tablai">
+                    <tr>
+                        <td>1° Número: </td>
+                        <td><input type="number" id = "numero1" min = "0" max = "99"></td>
+                    </tr>
+                    <tr>
+                        <td>2° Número: </td>
+                        <td><input type="number" id = "numero2" min = "0" max = "99"></td>
+                    </tr>
+                    <tr>
+                        <td>3° Número: </td>
+                        <td><input type="number" id = "numero3" min = "0" max = "99"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" name = "oper1" value = "Calcular" onclick = "return f_tres_numeros()"></td>
+                    </tr>
+                    <tr>
+                        <td>El número mayor es: </td>
+                        <td><input type="text" name = "oper2" id = "mayor" readonly = "readonly" class = "input_text"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" name = "borrar" value = "Borrar Datos" onclick = "return borrard()"></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+        <br>
+
+
+
+        <form method = "get" id = "problema9"action="">
+            <h1>Problema 9</h1>
+            <div class = "container9">
+                <table id = "tabla" class = "tablai">
+                    <tr>
+                        <td># Horas Trabajadas: </td>
+                        <td><input type="number" id = "horas_totales" min = "0" max = "99"></td>
+                    </tr>
+                    <tr>
+                        <td>Costo Por Horas Trabajadas: </td>
+                        <td><input type="text" id = "costo_hora" onkeypress = "return validarn(event)"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" name = "oper1" value = "Calcular" onclick = "return horas_extras()"></td>
+                    </tr>
+                    <tr>
+                        <td> Recibiras de Horas Extra: </td>
+                        <td> <input type="text" name="oper3" id="monto_extra" readonly="readonly" class="input_text"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" name="borrar" value="Borrar Datos" onclick="return borrard()"></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+        <br>
+
+
+
+        <form method = "get" id = "problema10" action="">
+            <h1>Problema 10</h1>
+            <div class = "container10">
+                <table id="tabla" class="tablai">
+                    <tr>
+                        <td># Años de Antiguedad: </td>
+                        <td> <input type="number" id="antiguo" min="0" max="99"> </td>
+                    </tr>
+                    <tr>
+                        <td>Sueldo Mensual: </td>
+                        <td><input type="text"   id="sueldo_mes" onkeypress="return validarn(event)"> </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" name="oper1" value="Calcular Utilidades" onclick="return f_utilidades()"></td>
+                    </tr>
+                    <tr>
+                        <td>Utilidades a Recibir: </td>
+                        <td><input type="text" name="oper3" id="utilidades" readonly="readonly" class="input_text"> </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" name="borrar" value="Borrar Datos" onclick="return borrard()"></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+        <br>
+
+        <fieldset class = "regresar">
+            <a href="../index.html">Regresar a la Página Principal</a>
+        </fieldset>
 
 
 
