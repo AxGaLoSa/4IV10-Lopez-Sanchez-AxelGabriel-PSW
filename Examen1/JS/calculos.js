@@ -65,9 +65,9 @@ function desplegar_tabla(){
 	
 	for (let j = 1; j <= tiempo; j++) {
 		
-		m_interes = capital_inicial * (tasa_porcentaje / 12);
+		m_interes = capitalini * (tasa_porcentaje / 12);
 		abono_capital = cuota - m_interes;
-		capi_final   = capital_inicial - abono_capital;
+		capi_final   = capitalini - abono_capital;
 		
 		rowCount = table.rows.length;
 		var row = table.insertRow(rowCount);
@@ -75,10 +75,10 @@ function desplegar_tabla(){
 		row.insertCell(1).innerHTML = "$ "+ redondeo(cuota);
 		row.insertCell(2).innerHTML = "$ "+ redondeo(m_interes);
 		row.insertCell(3).innerHTML = "$ "+ redondeo(abono_capital);
-		row.insertCell(4).innerHTML = "$ "+ redondeo(capital_inicial);
+		row.insertCell(4).innerHTML = "$ "+ redondeo(capitalini);
 		row.insertCell(5).innerHTML = "$ "+ redondeo(capi_final);
 
-		capital_inicial = capi_final;
+		capitalini = capi_final;
 	}
 }
 
