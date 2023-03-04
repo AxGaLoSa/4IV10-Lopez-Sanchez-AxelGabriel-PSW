@@ -63,7 +63,7 @@ function desplegar_tabla(){
 	var table = document.getElementById("amortizacion");
 	var rowCount  = 0;
 	
-	for (let j = 1; j <= n * m; j++) {
+	for (let j = 1; j <= tiempo; j++) {
 		
 		m_interes = capital_inicial * tasa_porcentaje / 12;
 		abono_capital = cuota - m_interes;
