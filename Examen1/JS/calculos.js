@@ -65,7 +65,7 @@ function desplegar_tabla(){
 	
 	for (let j = 1; j <= tiempo; j++) {
 		
-		m_interes = capital_inicial * tasa_porcentaje / 12;
+		m_interes = capital_inicial * (tasa_porcentaje / 12);
 		abono_capital = cuota - m_interes;
 		capi_final   = capital_inicial - abono_capital;
 		
