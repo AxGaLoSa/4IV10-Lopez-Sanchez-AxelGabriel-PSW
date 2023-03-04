@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exámen 1° Parcial</title>
+    <link rel="stylesheet" href="./CSS/stylexamen.css">
+    <script src = "./JS/calculos.js"></script>
+
+</head>
+<body>
+    <header>
+        <h1>TABLA DE INTERÉS COMPUESTO</h1>
+        <h2>LÓPEZ SÁNCHEZ AXEL GABRIEL 4IV10</h2>
+    </header>
+
+    <div class = "container">
+            <div class = "datos">
+            <table class = "ingresardatos" id = "ingresar_datos">
+                <tr>
+                    <td>Capital a Invertir: </td>
+                    <td>$ <input type="text" id = "capitalini" min = "1" max = "10000" onkeypress = "return validarn(event)" onpaste = "return false"></td>
+                </tr>
+                <tr>
+                    <td>Tasa de Interés: </td>
+                    <td><input type="text" id = "tasa_interes" min = "1" max =  "30" onkeypress = "return validarn(event)" onpaste = "return false"> %</td>
+                </tr>
+                <tr>
+                    <td>Años: </td>
+                    <td><input type="number" id = "años" min = "1" max = "20" onkeypress = "return validarn(event)" onpaste = "return false"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" name = "calcular" value = "Calcular" onclick = "return desplegar_tabla()"></td>
+                </tr>
+                <tr>
+                    <td>El Capital Final será de: </td>
+                    <td>$ <input type="text" id = "capital_final" name = "capital_f" readonly = "readonly" class = "input_text"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type = "button" name = "borrar" value = "Borrar Datos" onclick = "return borrard()"></td>
+                </tr>    
+            </table>
+            <br>
+            <br>
+        </div>
+        <br>
+        <br>
+        
+        
+        <div class = "tabla">
+            <h2>TABLA DE AMORTIZACIÓN</h2>
+            <table class = "tabla-amort" id = "amortizacion">
+                <col width = "80px"/>
+                <col width = "110px"/>
+                <col width = "110px"/>
+                <col width = "110px"/>
+                <col width = "110px"/>
+                <col width = "110px"/>
+                
+                <tr>
+                    <td><b># Pago</b></td>
+                    <td><b>Cuota</b></td>
+                    <td><b>Interés</b></td>
+                    <td><b>Abono a Capital</b></td>
+                    <td><b>Capital Inicial</b></td>
+                    <td><b>Capital Final</b></td>
+                </tr>
+            </table>
+        </div>  
+    </div>
+</body>
+</html>
