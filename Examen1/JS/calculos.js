@@ -56,11 +56,6 @@ function desplegar_tabla(){
     tasa_porcentaje = tasa_interes / 100;
     tiempo = años * 12;
 
-    var p = parseInt(prestamo);
-    var i = parseInt(interes)/100;
-    var n = parseInt(plazo);
-	var m = 12;
-
     var cuota = [capitalini * (tasa_porcentaje / 12) * (1 + tasa_porcentaje / 12) ** (años * 12)] / [(1 + tasa_porcentaje / 12) ** (años * 12) - 1];
 	
 	var table = document.getElementById("amortizacion");
@@ -70,7 +65,7 @@ function desplegar_tabla(){
 	
 	for (let j = 1; j <= n * m; j++) {
 		
-		m_interes     = capital_inicial * tasa_porcentaje / 12;
+		m_interes = capital_inicial * tasa_porcentaje / 12;
 		abono_capital = cuota - m_interes;
 		capi_final   = capital_inicial - abono_capital;
 		
