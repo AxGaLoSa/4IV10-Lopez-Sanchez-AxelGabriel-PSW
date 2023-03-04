@@ -1,3 +1,25 @@
+//VALIDACIÓN
+function validarn(e){
+
+    key = e.keyCode || e.which;
+    teclado = String.fromCharCode(key);
+    numeros = "0123456789";
+    especiales = "8-37-38-46";
+    teclado_especial = false;
+    
+    for(var i in especiales){
+        if(key == especiales[i]){
+            teclado_especial = true;
+        }    
+    }
+
+    if(numeros.indexOf(teclado) == -1 && !teclado_especial){
+        return false;
+    }   
+}
+
+
+
 //PROBLEMA 1
 function f_interes(){
     var valor = document.getElementById("cantidad").value;
@@ -7,18 +29,6 @@ function f_interes(){
     var interes = int_valor * 0.082 * int_meses;
     var total = int_valor + interes;
     document.getElementById("cantidadi").value = "$ " + total;
-}
-
-function validarn(e){
-    var teclado = (document.all)? e.keyCode : e.which;
-
-    if(teclado == 8) return true;
-
-    var patron = /[0-9\d .]/;
-
-    var codigo = String.fromCharCode(teclado);
-
-    return patron.test(codigo);
 }
 
 

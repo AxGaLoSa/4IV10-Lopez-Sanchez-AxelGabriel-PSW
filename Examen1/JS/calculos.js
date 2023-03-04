@@ -106,5 +106,5 @@ function validarn(e){
 
 //BORRAR DATOS
 function borrar(){
-    document.getElementById("examen").reset();
+    document.getElementsByClassName("container").reset();
 }
