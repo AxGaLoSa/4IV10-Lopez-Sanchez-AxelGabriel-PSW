@@ -21,15 +21,15 @@
             <table class = "ingresardatos" id = "ingresar_datos">
                 <tr>
                     <td>Capital a Invertir: </td>
-                    <td>$ <input type="text" id = "capitalini" min = "1" max = "10000" onkeypress = "return validarn(event)" onpaste = "return false"></td>
+                    <td>$ <input type="text" id = "capitalini" min = "1" max = "10000" onkeypress = "return validarn(event)" onkeypress = "return capital(event)" onpaste = "return false"></td>
                 </tr>
                 <tr>
                     <td>Tasa de Interés: </td>
-                    <td><input type="text" id = "tasa_interes" min = "1" max =  "30" onkeypress = "return validarn(event)" onpaste = "return false"> %</td>
+                    <td><input type="text" id = "tasa_interes" min = "1" max =  "30" onkeypress = "return validarn(event)" onkeypress = "return interes(event)" onpaste = "return false"> %</td>
                 </tr>
                 <tr>
                     <td>Años: </td>
-                    <td><input type="number" id = "años" min = "1" max = "20" onkeypress = "return validarn(event)" onpaste = "return false"></td>
+                    <td><input type="number" id = "años" min = "1" max = "20" onkeypress = "return validarn(event)" onkeypress = "return años(event)" onpaste = "return false"></td>
                 </tr>
                 <tr>
                     <td></td>

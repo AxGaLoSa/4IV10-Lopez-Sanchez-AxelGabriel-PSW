@@ -104,6 +104,90 @@ function validarn(e){
 }
 
 
+//VALIDACIÓN CAPITAL
+function capital(examen){
+    var limite = /[0-9\d .]/;
+    var capitalini = examen.capitalini.value;
+    var todoesvalido = true;
+
+    for(var i = 0; i < capitalini.length; i++){
+        var numeros = capitalini.charAt(i);
+        for(var j = 0; j < limite.length; j++){
+            if(numeros == limite.charAt(j)){
+                break;
+            }
+        }
+        if(j == limite.length){
+            todoesvalido = false;
+            break;
+        }
+    }
+
+    var capitalini = parseInt(examen.capitalini.value);
+    if(capitalini > 1000000){
+        alert("Ingresa el capital en un intervalo de entre $1 y $1,000,000");
+        examen.capitalini.focus();
+        return false;
+    }
+}
+
+
+//VALIDACIÓN INTERÉS
+function interes(examen){
+    var limite = /[0-9\d .]/;
+    var tasa_interes = examen.años.value;
+    var todoesvalido = true;
+
+    for(var i = 0; i < tasa_interes.length; i++){
+        var numeros = tasa_interes.charAt(i);
+        for(var j = 0; j < limite.length; j++){
+            if(numeros == limite.charAt(j)){
+                break;
+            }
+        }
+        if(j == limite.length){
+            todoesvalido = false;
+            break;
+        }
+    }
+
+    var tasa_interes = parseInt(examen.tasa_interes.value);
+    if(tasa_interes > 99){
+        alert("Ingresa un interés en un intervalo de entre 1% y 99%");
+        examen.tasa_interes.focus();
+        return false;
+    }
+}
+
+
+//VALIDACIÓN AÑOS
+function años(examen){
+    var limite = /[0-9\d .]/;
+    var años = examen.años.value;
+    var todoesvalido = true;
+
+    for(var i = 0; i < años.length; i++){
+        var numeros = años.charAt(i);
+        for(var j = 0; j < limite.length; j++){
+            if(numeros == limite.charAt(j)){
+                break;
+            }
+        }
+        if(j == limite.length){
+            todoesvalido = false;
+            break;
+        }
+    }
+
+    var años = parseInt(examen.años.value);
+    if(años > 20){
+        alert("Ingresa un rango de años de entre 1 y 20");
+        examen.años.focus();
+        return false;
+    } 
+}
+
+
 //BORRAR DATOS
 function borrar(){
     document.getElementsByClassName("container").reset();
