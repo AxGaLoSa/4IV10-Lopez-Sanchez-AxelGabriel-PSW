@@ -103,38 +103,3 @@ function validarn(e){
     }   
 }
 
-
-//VALIDACIÓN CAPITAL
-function capital(examen){
-
-    var capitalini = parseInt(examen.capitalini.value);
-    if(capitalini > 1000000){
-        alert("Ingresa el capital en un intervalo de entre $1 y $1,000,000");
-        examen.capitalini.focus();
-        return false;
-    }
-}
-
-
-//VALIDACIÓN INTERÉS
-function interes(examen){
-
-    var tasa_interes = parseInt(examen.tasa_interes.value);
-    if(tasa_interes > 99){
-        alert("Ingresa un interés en un intervalo de entre 1% y 99%");
-        examen.tasa_interes.focus();
-        return false;
-    }
-}
-
-
-//VALIDACIÓN AÑOS
-function años(examen){
-
-    var años = parseInt(examen.años.value);
-    if(años > 20){
-        alert("Ingresa un rango de años de entre 1 y 20");
-        examen.años.focus();
-        return false;
-    } 
-}
