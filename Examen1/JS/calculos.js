@@ -62,7 +62,6 @@ function desplegar_tabla(){
 	
 	var table = document.getElementById("amortizacion");
 	var rowCount  = 0;
-	borra_tabla();
 	
 	for (let j = 1; j <= n * m; j++) {
 		
