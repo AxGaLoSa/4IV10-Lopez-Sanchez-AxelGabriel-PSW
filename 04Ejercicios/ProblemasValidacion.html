@@ -21,7 +21,7 @@
                 <table id = "tabla" class = "tablai">
                     <tr>
                         <td>Cantidad a invertir: </td>
-                        <td><input type="text" id = "cantidad" onkeypress="return validarn(event)"></td>
+                        <td><input type="text" id = "cantidad" onkeypress="return validarn(event)" onpaste = "return false"></td>
                     </tr>
                     <tr>
                         <td>Meses de Inversión: </td>
@@ -32,7 +32,7 @@
                         <td><input type="button" name = "inversion" value = "Interés" onclick = "return f_interes()"></td>
                     </tr>
                     <tr>
-                        <td>Al termino de su inversiín valdrá: </td>
+                        <td>Al termino de su inversión valdrá: </td>
                         <td><input type="text" name = "sueldoi" id = "cantidadi" readonly = "readonly" class = "input_text"></td>
                     </tr>
                     <tr>
@@ -52,15 +52,15 @@
                 <table id = "tabla" class = "tablai">
                     <tr>
                         <td>Sueldo Base: </td>
-                        <td><input type="text" id = "sueldo" onkeypress="return validarn(event)"></td>
+                        <td><input type="text" id = "sueldo" onkeypress="return validarn(event)" onpaste = "return false"></td>
                     </tr>
                     <tr>
                         <td># Ventas en el Mes: </td>
-                        <td><input type="numer" id = "ventas" min="0" max="99" value="" onkeypress="return validarn(event)"></td>
+                        <td><input type="numer" id = "ventas" min="0" max="99" value="" onkeypress="return validarn(event)" onpaste = "return false"></td>
                     </tr>
                     <tr>
                         <td>Monto de las Ventas del Mes: </td>
-                        <td><input type="text" id = "monto_ventas" onkeypress = "return validarn(event)"></td>
+                        <td><input type="text" id = "monto_ventas" onkeypress = "return validarn(event)" onpaste = "return false"></td>
                     </tr>
                     <tr>
                         <td></td>
@@ -90,7 +90,7 @@
                 <table id = "tabla" class = "tablai">
                     <tr>
                         <td>Nombre del Producto: </td>
-                        <td><input type="text" name="nombre" id="nombre"></td>
+                        <td><input type="text" name="nombre" id="nombre" ></td>
                     </tr>
                     <tr>
                         <td>Marca del Producto: </td>
@@ -307,7 +307,7 @@
                     </tr>
                     <tr>
                         <td>Costo Por Horas Trabajadas: </td>
-                        <td><input type="text" id = "costo_hora" onkeypress = "return validarn(event)"></td>
+                        <td><input type="text" id = "costo_hora" onkeypress = "return validarn(event)" onpaste = "return false"></td>
                     </tr>
                     <tr>
                         <td></td>
@@ -334,11 +334,11 @@
                 <table id="tabla" class="tablai">
                     <tr>
                         <td># Años de Antiguedad: </td>
-                        <td> <input type="number" id="antiguo" min="0" max="99"> </td>
+                        <td> <input type="number" id="antiguo" min="0" max="99"></td>
                     </tr>
                     <tr>
                         <td>Sueldo Mensual: </td>
-                        <td><input type="text"   id="sueldo_mes" onkeypress="return validarn(event)"> </td>
+                        <td><input type="text"   id="sueldo_mes" onkeypress="return validarn(event)" onpaste = "return false"> </td>
                     </tr>
                     <tr>
                         <td></td>
