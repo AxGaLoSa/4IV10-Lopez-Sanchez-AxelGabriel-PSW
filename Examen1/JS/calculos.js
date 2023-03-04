@@ -11,7 +11,7 @@ const tasa_porcentaje = tasa_interes / 100;
 
 
 //CALCULAR EL INTERÉS
-function calculo_interes(){
+/*function calculo_interes(){
     capitalini = document.getElementById("capitalini").value;
     tasa_interes = document.getElementById("tasa_interes").value;
     años = document.getElementById("años").value;
@@ -42,7 +42,9 @@ function capital_final(){
         examen.capitalini.focus();
         return false;
     }*/
-    
+
+function redondeo(n) {    
+    return Math.round(n*100)/100;
 }
 
 
@@ -103,7 +105,3 @@ function validarn(e){
     }   
 }
 
-
-function borrard(){
-    document.getElementById("ingresar_datos").reset();
-}
