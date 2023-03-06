@@ -1,10 +1,61 @@
 //PROBLEMA 1
-function problema(){
+function problema1(){
+    var valores = document.getElementById("p1-input").value;
+    var split = valores.split('').reserve();
+    var resultado = '';
+
+    split.forEach(function(palabras, i){
+        if(i != 0 || i != split.length) resultado += '';
+        resultado += palabras;
+    });
+
+    document.querySelector('#p1-output').textContent = resultado;
+}
+
+//PROBLEMA 2
+function problema2(){
+    //PARA VALORES DE X
+    var x1 = document.querySelector('#p2-x1').value;
+    var x2 = document.querySelector('#p2-x2').value;
+    var x3 = document.querySelector('#p2-x3').value;
+    var x4 = document.querySelector('#p2-x4').value;
+    var x5 = document.querySelector('#p2-x5').value;
+
+    //PARA VALORES DE Y
+    var y1 = document.querySelector('#p2-y1').value;
+    var y2 = document.querySelector('#p2-y2').value;
+    var y3 = document.querySelector('#p2-y3').value;
+    var y4 = document.querySelector('#p2-y4').value;
+    var y5 = document.querySelector('#p2-y4').value;
+
+    var vec_x = [x1, x2, x3, x4, x5];
+    var vec_y = [y1, y2, y3, y4, y5];
+
+    vec_x = vec_x.sort(function(vec_x,vec_y){
+        return vec_y - vec_x;
+    });
+
+    vec_y = vec_y.sort(function(vec_x,vec_y){
+        return vec_y - vec_x;
+    });
+
+    vec_y = vec_y.reverse();
+    var resultado = 0;
+    for(var i = 0; i < vec_x.length; i++){
+        resultado += vec_x[i] * vec_y[i];
+    }
+
+    document.querySelector('#p2-output').textContent = 'El producto escalar mínimo es de: ' + resultado;
+
+}
+
+//PROBLEMA 3
+function problema3(){
     //primero necesitamos definir un alfabeto
 
     var alfabeto = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','Ñ','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
 
-    //VAMOS A OBTENER A NETRADA DE DATOS
+    //VAMOS A OBTENER A ENTRADA DE DATOS
     var p3_input = document.querySelector ('#p3-input').value;
 
     //LO QUE NECESITAMOS ES SEPARAR TODO POR COMAS
@@ -41,8 +92,3 @@ function problema(){
     });
     document.querySelector('.#p3-output').textContent = p3_respuesta;
 }
-
-//PROBLEMA 2
-
-
-//PROBLEMA 3
