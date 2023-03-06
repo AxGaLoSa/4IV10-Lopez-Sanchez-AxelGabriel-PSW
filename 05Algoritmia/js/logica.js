@@ -1,7 +1,7 @@
 //PROBLEMA 1
 function problema1(){
     var valores = document.getElementById("p1-input").value;
-    var split = valores.split('').reserve();
+    var split = valores.split('').reserve;
     var resultado = '';
 
     split.forEach(function(palabras, i){
