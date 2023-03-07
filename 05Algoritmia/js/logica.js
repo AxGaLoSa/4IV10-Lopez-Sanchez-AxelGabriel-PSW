@@ -1,7 +1,7 @@
 //PROBLEMA 1
 function problema1(){
-    var valores = document.getElementById("p1-input").value;
-    var split = valores.split('').reserve;
+    var datos = document.getElementById("p1-input").value;
+    var split = datos.split('').reverse();
     var resultado = '';
 
     split.forEach(function(palabras, i){
@@ -64,7 +64,7 @@ function problema3(){
     //NECESITAMOS UNA FUNCIÓN QUE SE ENCARGUE DE RECUPERAR CADA PALABRA
     //TENGO QUE ELIMINAR LOS ESPACIOS
     p3_palabras = p3_palabras.map(function(palabras){
-        return palabras.replace(/\s/g, '').toUppercase();
+        return palabras.replace(/\s/g, '').toUpperCase();
     });
 
     //CALCULAR LOS CARACTERES ÚNICOS
