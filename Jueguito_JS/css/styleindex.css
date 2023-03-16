@@ -1,0 +1,165 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica, Arial, sans-serif;
+	color: #ffffff;
+	font-size: 1em;
+	line-height: 1.5em;
+	
+	padding-top: 80px; /* Relleno superior igual a la altura de la cabecera*/
+
+	background-image: linear-gradient(135deg,
+        #00b7d4, #505488, #2f3f80, #161569,
+        #4a4894, #181a88, #03073a);
+    background-size: 500%;
+    animation: fanimado 10s infinite;
+}
+
+@keyframes fanimado{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+h1 {
+	font-size: 2.3em;
+	line-height: 1.3em;
+	margin: 15px 0;
+	text-align: center;
+	font-weight: 300;
+}
+
+p {
+	margin: 0 0 1.5em 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+#main-header {
+	background: #080808;
+	color: white;
+	height: 80px;
+}	
+	#main-header a {
+		color: rgb(0, 0, 0);
+	}
+
+/*
+ * Logo
+ */
+#logo-header {
+	float: left;
+	padding: 15px 0 0 20px;
+	text-decoration: none;
+}
+#logo-header:hover {
+	color: #0b76a6;
+}
+	
+#logo-header .site-name {
+	display: block;
+	font-weight: 700;
+	font-size: 1.2em;
+}
+	
+#logo-header .site-desc {
+	display: block;
+	font-weight: 300;
+	font-size: 0.8em;
+	color: #999;
+}
+	
+
+/*
+ * Navegación
+ */
+nav {
+	float: right;
+}
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	padding-right: 20px;
+}
+
+nav ul li {
+	display: inline-block;
+	line-height: 80px;
+}
+			
+nav ul li a {
+	display: block;
+	padding: 0 10px;
+	text-decoration: none;
+}
+			
+nav ul li a:hover {
+	background: #bebebe;
+}
+
+
+#main-header {
+	
+	background-image: linear-gradient(135deg,
+	#00b7d4, #505488, #2f3f80, #161569,
+	#4a4894, #181a88, #03073a);
+	border: solid 5px;
+	border-color: #e2e2e2;
+	border-radius: 5px;
+	background-size: 500%;
+	animation: fanimado 10s infinite;
+	color: rgb(228, 228, 228);
+	height: 80px;
+	
+	width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+	left: 0; /* Posicionamos la cabecera al lado izquierdo */
+	top: 0; /* Posicionamos la cabecera pegada arriba */
+	position: fixed; /* Hacemos que la cabecera tenga una posición fija */
+}
+
+.boton1{
+    text-decoration: none;
+    display:inline-block;
+    width:50%;
+    padding:20px;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius:50px;
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    font-weight: bold;
+    transition: all 0.9s;
+    text-align: center;
+    font-size: 30px;
+    
+  }
+
+.boton1:hover{
+    background:rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+}
+
+.container .instrucciones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .jugar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+p{
+    text-align: center;
+}
